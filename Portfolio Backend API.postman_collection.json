@@ -1,0 +1,552 @@
+{
+  "info": {
+    "_postman_id": "266d14a5-fe37-42ce-8a47-666a5798b781",
+    "name": "Portfolio Backend API",
+    "description": "API collection for Portfolio Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43038267"
+  },
+  "item": [
+    {
+      "name": "Create Project",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Test Portfolio Project",
+              "type": "text"
+            },
+            {
+              "key": "details",
+              "value": "This is a dummy project created via test script.",
+              "type": "text"
+            },
+            {
+              "key": "liveLink",
+              "value": "https://example.com",
+              "type": "text"
+            },
+            {
+              "key": "github",
+              "value": "https://github.com/example/repo",
+              "type": "text"
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "value": null
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/projects",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/projects",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "Text",
+          "header": [],
+          "cookie": [],
+          "body": "{\n  \"name\": \"Test Portfolio Project\",\n  \"details\": \"This is a dummy project created via test script.\",\n  \"liveLink\": \"https://example.com\",\n  \"github\": \"https://github.com/example/repo\",\n  \"images\": [\n    \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n  ],\n  \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n  \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n  \"updatedAt\": \"2026-07-18T16:14:22.235Z\",\n  \"__v\": 0\n}"
+        },
+        {
+          "name": "Create Project",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Test Portfolio Project",
+                  "type": "text"
+                },
+                {
+                  "key": "details",
+                  "value": "This is a dummy project created via test script.",
+                  "type": "text"
+                },
+                {
+                  "key": "liveLink",
+                  "value": "https://example.com",
+                  "type": "text"
+                },
+                {
+                  "key": "github",
+                  "value": "https://github.com/example/repo",
+                  "type": "text"
+                },
+                {
+                  "key": "images",
+                  "type": "file",
+                  "src": [
+                    "/C:/Users/jasmi/OneDrive/Pictures/733912161_1013444598207932_297065373808708640_n.jpg",
+                    "/C:/Users/jasmi/OneDrive/Pictures/729736784_1008302385388820_2765587001560060013_n.jpg"
+                  ]
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/projects",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "projects"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 201
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 18 Jul 2026 16:31:49 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"204-zCdfnzxsgJYKBXaO77j1QFYeflY\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "bom1::iad1::8drd5-1784392304664-502976af2741"
+            },
+            {
+              "key": "content-length",
+              "value": "516"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"name\": \"Test Portfolio Project\",\n    \"details\": \"This is a dummy project created via test script.\",\n    \"liveLink\": \"https://example.com\",\n    \"github\": \"https://github.com/example/repo\",\n    \"images\": [\n        \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784392307/portfolio_projects/shtmwnhuvxlr2xszg8mk.jpg\",\n        \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784392307/portfolio_projects/tkgbi8fpvxtei8wovizd.jpg\"\n    ],\n    \"_id\": \"6a5baa73988eb8d86251c83c\",\n    \"createdAt\": \"2026-07-18T16:31:47.900Z\",\n    \"updatedAt\": \"2026-07-18T16:31:47.900Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Projects",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/projects",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n    \"name\": \"Test Portfolio Project\",\n    \"details\": \"This is a dummy project created via test script.\",\n    \"liveLink\": \"https://example.com\",\n    \"github\": \"https://github.com/example/repo\",\n    \"images\": [\n      \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n    ],\n    \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n    \"updatedAt\": \"2026-07-18T16:14:22.235Z\",\n    \"__v\": 0\n  }\n]"
+        },
+        {
+          "name": "Get All Projects",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/projects",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "projects"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "age",
+              "value": "0"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 18 Jul 2026 16:32:06 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"39d-wGVT76vhQtnORUj0V1W3eDIGpi8\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "bom1::iad1::gm55j-1784392325870-1f41c5781f48"
+            },
+            {
+              "key": "content-length",
+              "value": "925"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"_id\": \"6a5baa73988eb8d86251c83c\",\n        \"name\": \"Test Portfolio Project\",\n        \"details\": \"This is a dummy project created via test script.\",\n        \"liveLink\": \"https://example.com\",\n        \"github\": \"https://github.com/example/repo\",\n        \"images\": [\n            \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784392307/portfolio_projects/shtmwnhuvxlr2xszg8mk.jpg\",\n            \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784392307/portfolio_projects/tkgbi8fpvxtei8wovizd.jpg\"\n        ],\n        \"createdAt\": \"2026-07-18T16:31:47.900Z\",\n        \"updatedAt\": \"2026-07-18T16:31:47.900Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n        \"name\": \"Updated Test Project\",\n        \"details\": \"This is a dummy project created via test script.\",\n        \"liveLink\": \"https://example.com\",\n        \"github\": \"https://github.com/example/repo\",\n        \"images\": [\n            \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n        ],\n        \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n        \"updatedAt\": \"2026-07-18T16:14:22.425Z\",\n        \"__v\": 0\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Single Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects",
+            "6a5ba65e71e9b8214de9fe53"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "projects",
+                "6a5ba65e71e9b8214de9fe53"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [],
+          "cookie": [],
+          "body": "{\n  \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n  \"name\": \"Test Portfolio Project\",\n  \"details\": \"This is a dummy project created via test script.\",\n  \"liveLink\": \"https://example.com\",\n  \"github\": \"https://github.com/example/repo\",\n  \"images\": [\n    \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n  ],\n  \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n  \"updatedAt\": \"2026-07-18T16:14:22.235Z\",\n  \"__v\": 0\n}"
+        },
+        {
+          "name": "Get Single Project",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/projects/6a5baa73988eb8d86251c83c",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "projects",
+                "6a5baa73988eb8d86251c83c"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "age",
+              "value": "0"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Sat, 18 Jul 2026 16:33:39 GMT"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"204-xOJ1426Q3WtHhf0pFYo8C+m9MqU\""
+            },
+            {
+              "key": "server",
+              "value": "Vercel"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "x-vercel-cache",
+              "value": "MISS"
+            },
+            {
+              "key": "x-vercel-id",
+              "value": "bom1::iad1::96ftt-1784392418908-96fe598c0f6d"
+            },
+            {
+              "key": "content-length",
+              "value": "516"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"_id\": \"6a5baa73988eb8d86251c83c\",\n    \"name\": \"Test Portfolio Project\",\n    \"details\": \"This is a dummy project created via test script.\",\n    \"liveLink\": \"https://example.com\",\n    \"github\": \"https://github.com/example/repo\",\n    \"images\": [\n        \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784392307/portfolio_projects/shtmwnhuvxlr2xszg8mk.jpg\",\n        \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784392307/portfolio_projects/tkgbi8fpvxtei8wovizd.jpg\"\n    ],\n    \"createdAt\": \"2026-07-18T16:31:47.900Z\",\n    \"updatedAt\": \"2026-07-18T16:31:47.900Z\",\n    \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Project",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Updated Test Project",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects",
+            "6a5ba65e71e9b8214de9fe53"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "projects",
+                "6a5ba65e71e9b8214de9fe53"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "Text",
+          "header": [],
+          "cookie": [],
+          "body": "{\n  \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n  \"name\": \"Updated Test Project\",\n  \"details\": \"This is a dummy project created via test script.\",\n  \"liveLink\": \"https://example.com\",\n  \"github\": \"https://github.com/example/repo\",\n  \"images\": [\n    \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n  ],\n  \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n  \"updatedAt\": \"2026-07-18T16:14:22.425Z\",\n  \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Project",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects",
+            "6a5ba65e71e9b8214de9fe53"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}
