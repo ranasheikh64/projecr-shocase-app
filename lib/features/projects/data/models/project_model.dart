@@ -14,7 +14,7 @@ class ProjectModel extends HiveObject {
   @HiveField(2)
   final String details;
 
-  @HiveField(3)
+  @HiveField(3, defaultValue: '')
   final String googlePlayStoreLink;
 
   @HiveField(4)
@@ -29,7 +29,7 @@ class ProjectModel extends HiveObject {
   @HiveField(7)
   final DateTime updatedAt;
 
-  @HiveField(8)
+  @HiveField(8, defaultValue: '')
   final String appleAppStoreLink;
 
   ProjectModel({
