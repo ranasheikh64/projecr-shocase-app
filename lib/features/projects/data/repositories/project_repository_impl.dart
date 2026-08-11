@@ -49,14 +49,16 @@ class ProjectRepositoryImpl implements ProjectRepository {
   Future<ProjectEntity> createProject({
     required String name,
     required String details,
-    required String liveLink,
+    required String googlePlayStoreLink,
+    required String appleAppStoreLink,
     required String github,
     required List<File> images,
   }) async {
     final model = await remoteDataSource.createProject(
       name: name,
       details: details,
-      liveLink: liveLink,
+      googlePlayStoreLink: googlePlayStoreLink,
+      appleAppStoreLink: appleAppStoreLink,
       github: github,
       images: images,
     );
@@ -69,7 +71,8 @@ class ProjectRepositoryImpl implements ProjectRepository {
     required String id,
     String? name,
     String? details,
-    String? liveLink,
+    String? googlePlayStoreLink,
+    String? appleAppStoreLink,
     String? github,
     List<File>? newImages,
   }) async {
@@ -77,7 +80,8 @@ class ProjectRepositoryImpl implements ProjectRepository {
       id: id,
       name: name,
       details: details,
-      liveLink: liveLink,
+      googlePlayStoreLink: googlePlayStoreLink,
+      appleAppStoreLink: appleAppStoreLink,
       github: github,
       newImages: newImages,
     );

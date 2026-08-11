@@ -1,0 +1,211 @@
+{
+  "info": {
+    "name": "Portfolio Backend API",
+    "description": "API collection for Portfolio Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Project",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Test Portfolio Project",
+              "type": "text"
+            },
+            {
+              "key": "details",
+              "value": "This is a dummy project created via test script.",
+              "type": "text"
+            },
+            {
+              "key": "googlePlayStoreLink",
+              "value": "https://play.google.com/store/apps/details?id=com.example",
+              "type": "text"
+            },
+            {
+              "key": "appleAppStoreLink",
+              "value": "https://apps.apple.com/us/app/example/id123456789",
+              "type": "text"
+            },
+            {
+              "key": "github",
+              "value": "https://github.com/example/repo",
+              "type": "text"
+            },
+            {
+              "key": "images",
+              "type": "file",
+              "src": []
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/projects",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "POST",
+            "url": "http://localhost:5000/api/projects"
+          },
+          "status": "Created",
+          "code": 201,
+          "body": "{\n  \"name\": \"Test Portfolio Project\",\n  \"details\": \"This is a dummy project created via test script.\",\n  \"github\": \"https://github.com/example/repo\",\n  \"images\": [\n    \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n  ],\n  \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n  \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n  \"updatedAt\": \"2026-07-18T16:14:22.235Z\",\n  \"__v\": 0,\n  \"googlePlayStoreLink\": \"https://play.google.com/store/apps/details?id=com.example\",\n  \"appleAppStoreLink\": \"https://apps.apple.com/us/app/example/id123456789\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Projects",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "GET",
+            "url": "http://localhost:5000/api/projects"
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "[\n  {\n    \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n    \"name\": \"Test Portfolio Project\",\n    \"details\": \"This is a dummy project created via test script.\",\n    \"github\": \"https://github.com/example/repo\",\n    \"images\": [\n      \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n    ],\n    \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n    \"updatedAt\": \"2026-07-18T16:14:22.235Z\",\n    \"__v\": 0,\n    \"googlePlayStoreLink\": \"https://play.google.com/store/apps/details?id=com.example\",\n    \"appleAppStoreLink\": \"https://apps.apple.com/us/app/example/id123456789\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Single Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects",
+            "6a5ba65e71e9b8214de9fe53"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "GET",
+            "url": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53"
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n  \"name\": \"Test Portfolio Project\",\n  \"details\": \"This is a dummy project created via test script.\",\n  \"github\": \"https://github.com/example/repo\",\n  \"images\": [\n    \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n  ],\n  \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n  \"updatedAt\": \"2026-07-18T16:14:22.235Z\",\n  \"__v\": 0,\n  \"googlePlayStoreLink\": \"https://play.google.com/store/apps/details?id=com.example\",\n  \"appleAppStoreLink\": \"https://apps.apple.com/us/app/example/id123456789\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Project",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Updated Test Project",
+              "type": "text"
+            },
+            {
+              "key": "googlePlayStoreLink",
+              "value": "https://play.google.com/store/apps/details?id=com.example.updated",
+              "type": "text"
+            },
+            {
+              "key": "appleAppStoreLink",
+              "value": "https://apps.apple.com/us/app/example/id123456789",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects",
+            "6a5ba65e71e9b8214de9fe53"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "PUT",
+            "url": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53"
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"_id\": \"6a5ba65e71e9b8214de9fe53\",\n  \"name\": \"Updated Test Project\",\n  \"details\": \"This is a dummy project created via test script.\",\n  \"github\": \"https://github.com/example/repo\",\n  \"images\": [\n    \"https://res.cloudinary.com/dbmnia6qh/image/upload/v1784391284/portfolio_projects/dxwstebrvlxtlks0huf2.png\"\n  ],\n  \"createdAt\": \"2026-07-18T16:14:22.235Z\",\n  \"updatedAt\": \"2026-07-18T16:14:22.425Z\",\n  \"__v\": 0,\n  \"googlePlayStoreLink\": \"https://play.google.com/store/apps/details?id=com.example\",\n  \"appleAppStoreLink\": \"https://apps.apple.com/us/app/example/id123456789\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Project",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects/6a5ba65e71e9b8214de9fe53",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "projects",
+            "6a5ba65e71e9b8214de9fe53"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

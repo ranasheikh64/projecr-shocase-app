@@ -4,7 +4,8 @@ class ProjectEntity extends Equatable {
   final String id;
   final String name;
   final String details;
-  final String liveLink;
+  final String googlePlayStoreLink;
+  final String appleAppStoreLink;
   final String github;
   final List<String> images;
   final DateTime createdAt;
@@ -14,7 +15,8 @@ class ProjectEntity extends Equatable {
     required this.id,
     required this.name,
     required this.details,
-    required this.liveLink,
+    required this.googlePlayStoreLink,
+    required this.appleAppStoreLink,
     required this.github,
     required this.images,
     required this.createdAt,
@@ -22,6 +24,15 @@ class ProjectEntity extends Equatable {
   });
 
   @override
-  List<Object?> get props =>
-      [id, name, details, liveLink, github, images, createdAt, updatedAt];
+  List<Object?> get props => [
+        id,
+        name,
+        details,
+        googlePlayStoreLink,
+        appleAppStoreLink,
+        github,
+        images,
+        createdAt,
+        updatedAt
+      ];
 }

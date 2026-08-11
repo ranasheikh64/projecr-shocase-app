@@ -47,7 +47,8 @@ class _AddProjectFormState extends State<_AddProjectForm> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _detailsController = TextEditingController();
-  final _liveLinkController = TextEditingController();
+  final _googlePlayStoreLinkController = TextEditingController();
+  final _appleAppStoreLinkController = TextEditingController();
   final _githubController = TextEditingController();
   final List<File> _selectedImages = [];
   final ImagePicker _picker = ImagePicker();
@@ -56,7 +57,8 @@ class _AddProjectFormState extends State<_AddProjectForm> {
   void dispose() {
     _nameController.dispose();
     _detailsController.dispose();
-    _liveLinkController.dispose();
+    _googlePlayStoreLinkController.dispose();
+    _appleAppStoreLinkController.dispose();
     _githubController.dispose();
     super.dispose();
   }
@@ -91,7 +93,8 @@ class _AddProjectFormState extends State<_AddProjectForm> {
             CreateProjectEvent(
               name: _nameController.text.trim(),
               details: _detailsController.text.trim(),
-              liveLink: _liveLinkController.text.trim(),
+              googlePlayStoreLink: _googlePlayStoreLinkController.text.trim(),
+              appleAppStoreLink: _appleAppStoreLinkController.text.trim(),
               github: _githubController.text.trim(),
               images: _selectedImages,
             ),
@@ -153,10 +156,18 @@ class _AddProjectFormState extends State<_AddProjectForm> {
                 context, 'Links', Icons.link_rounded),
             const SizedBox(height: 16),
             _buildTextField(
-              controller: _liveLinkController,
-              label: 'Live Demo URL',
-              hint: 'https://example.com',
-              icon: Icons.launch_rounded,
+              controller: _googlePlayStoreLinkController,
+              label: 'Google Play Store URL',
+              hint: 'https://play.google.com/...',
+              icon: Icons.shop_rounded,
+              keyboardType: TextInputType.url,
+            ),
+            const SizedBox(height: 16),
+            _buildTextField(
+              controller: _appleAppStoreLinkController,
+              label: 'Apple App Store URL',
+              hint: 'https://apps.apple.com/...',
+              icon: Icons.shop_rounded,
               keyboardType: TextInputType.url,
             ),
             const SizedBox(height: 16),

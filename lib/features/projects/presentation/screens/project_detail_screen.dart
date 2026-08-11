@@ -207,13 +207,21 @@ class ProjectDetailScreen extends StatelessWidget {
             title: 'Links',
             child: Column(
               children: [
-                if (project.liveLink.isNotEmpty)
+                if (project.googlePlayStoreLink.isNotEmpty)
                   _buildLinkTile(
                     context,
-                    icon: Icons.launch_rounded,
-                    label: 'Live Demo',
-                    url: project.liveLink,
+                    icon: Icons.shop_rounded,
+                    label: 'Google Play Store',
+                    url: project.googlePlayStoreLink,
                     color: AppTheme.successColor,
+                  ),
+                if (project.appleAppStoreLink.isNotEmpty)
+                  _buildLinkTile(
+                    context,
+                    icon: Icons.shop_rounded,
+                    label: 'Apple App Store',
+                    url: project.appleAppStoreLink,
+                    color: AppTheme.primaryColor,
                   ),
                 if (project.github.isNotEmpty)
                   _buildLinkTile(

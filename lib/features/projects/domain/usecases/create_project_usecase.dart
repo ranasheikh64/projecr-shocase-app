@@ -5,14 +5,16 @@ import '../repositories/project_repository.dart';
 class CreateProjectParams {
   final String name;
   final String details;
-  final String liveLink;
+  final String googlePlayStoreLink;
+  final String appleAppStoreLink;
   final String github;
   final List<File> images;
 
   const CreateProjectParams({
     required this.name,
     required this.details,
-    required this.liveLink,
+    required this.googlePlayStoreLink,
+    required this.appleAppStoreLink,
     required this.github,
     required this.images,
   });
@@ -27,7 +29,8 @@ class CreateProjectUseCase {
     return repository.createProject(
       name: params.name,
       details: params.details,
-      liveLink: params.liveLink,
+      googlePlayStoreLink: params.googlePlayStoreLink,
+      appleAppStoreLink: params.appleAppStoreLink,
       github: params.github,
       images: params.images,
     );
