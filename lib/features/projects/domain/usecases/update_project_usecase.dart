@@ -6,8 +6,8 @@ class UpdateProjectParams {
   final String id;
   final String? name;
   final String? details;
-  final String? googlePlayStoreLink;
-  final String? appleAppStoreLink;
+  final String? googlePlayStore;
+  final String? appleAppStore;
   final String? github;
   final List<File>? newImages;
 
@@ -15,8 +15,8 @@ class UpdateProjectParams {
     required this.id,
     this.name,
     this.details,
-    this.googlePlayStoreLink,
-    this.appleAppStoreLink,
+    this.googlePlayStore,
+    this.appleAppStore,
     this.github,
     this.newImages,
   });
@@ -32,8 +32,8 @@ class UpdateProjectUseCase {
       id: params.id,
       name: params.name,
       details: params.details,
-      googlePlayStoreLink: params.googlePlayStoreLink,
-      appleAppStoreLink: params.appleAppStoreLink,
+      googlePlayStore: params.googlePlayStore,
+      appleAppStore: params.appleAppStore,
       github: params.github,
       newImages: params.newImages,
     );

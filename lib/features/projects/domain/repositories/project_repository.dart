@@ -12,8 +12,8 @@ abstract class ProjectRepository {
   Future<ProjectEntity> createProject({
     required String name,
     required String details,
-    required String googlePlayStoreLink,
-    required String appleAppStoreLink,
+    required String googlePlayStore,
+    required String appleAppStore,
     required String github,
     required List<File> images,
   });
@@ -23,8 +23,8 @@ abstract class ProjectRepository {
     required String id,
     String? name,
     String? details,
-    String? googlePlayStoreLink,
-    String? appleAppStoreLink,
+    String? googlePlayStore,
+    String? appleAppStore,
     String? github,
     List<File>? newImages,
   });

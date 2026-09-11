@@ -20,8 +20,8 @@ class ProjectModelAdapter extends TypeAdapter<ProjectModel> {
       id: fields[0] as String,
       name: fields[1] as String,
       details: fields[2] as String,
-      googlePlayStoreLink: fields[3] == null ? '' : fields[3] as String,
-      appleAppStoreLink: fields[8] == null ? '' : fields[8] as String,
+      googlePlayStore: fields[3] == null ? '' : fields[3] as String,
+      appleAppStore: fields[8] == null ? '' : fields[8] as String,
       github: fields[4] as String,
       images: (fields[5] as List).cast<String>(),
       createdAt: fields[6] as DateTime,
@@ -40,7 +40,7 @@ class ProjectModelAdapter extends TypeAdapter<ProjectModel> {
       ..writeByte(2)
       ..write(obj.details)
       ..writeByte(3)
-      ..write(obj.googlePlayStoreLink)
+      ..write(obj.googlePlayStore)
       ..writeByte(4)
       ..write(obj.github)
       ..writeByte(5)
@@ -50,7 +50,7 @@ class ProjectModelAdapter extends TypeAdapter<ProjectModel> {
       ..writeByte(7)
       ..write(obj.updatedAt)
       ..writeByte(8)
-      ..write(obj.appleAppStoreLink);
+      ..write(obj.appleAppStore);
   }
 
   @override

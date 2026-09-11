@@ -4,8 +4,8 @@ class ProjectEntity extends Equatable {
   final String id;
   final String name;
   final String details;
-  final String googlePlayStoreLink;
-  final String appleAppStoreLink;
+  final String googlePlayStore;
+  final String appleAppStore;
   final String github;
   final List<String> images;
   final DateTime createdAt;
@@ -15,8 +15,8 @@ class ProjectEntity extends Equatable {
     required this.id,
     required this.name,
     required this.details,
-    required this.googlePlayStoreLink,
-    required this.appleAppStoreLink,
+    required this.googlePlayStore,
+    required this.appleAppStore,
     required this.github,
     required this.images,
     required this.createdAt,
@@ -28,8 +28,8 @@ class ProjectEntity extends Equatable {
         id,
         name,
         details,
-        googlePlayStoreLink,
-        appleAppStoreLink,
+        googlePlayStore,
+        appleAppStore,
         github,
         images,
         createdAt,

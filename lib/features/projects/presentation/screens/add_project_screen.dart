@@ -47,8 +47,8 @@ class _AddProjectFormState extends State<_AddProjectForm> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _detailsController = TextEditingController();
-  final _googlePlayStoreLinkController = TextEditingController();
-  final _appleAppStoreLinkController = TextEditingController();
+  final _googlePlayStoreController = TextEditingController();
+  final _appleAppStoreController = TextEditingController();
   final _githubController = TextEditingController();
   final List<File> _selectedImages = [];
   final ImagePicker _picker = ImagePicker();
@@ -57,8 +57,8 @@ class _AddProjectFormState extends State<_AddProjectForm> {
   void dispose() {
     _nameController.dispose();
     _detailsController.dispose();
-    _googlePlayStoreLinkController.dispose();
-    _appleAppStoreLinkController.dispose();
+    _googlePlayStoreController.dispose();
+    _appleAppStoreController.dispose();
     _githubController.dispose();
     super.dispose();
   }
@@ -93,8 +93,8 @@ class _AddProjectFormState extends State<_AddProjectForm> {
             CreateProjectEvent(
               name: _nameController.text.trim(),
               details: _detailsController.text.trim(),
-              googlePlayStoreLink: _googlePlayStoreLinkController.text.trim(),
-              appleAppStoreLink: _appleAppStoreLinkController.text.trim(),
+              googlePlayStore: _googlePlayStoreController.text.trim(),
+              appleAppStore: _appleAppStoreController.text.trim(),
               github: _githubController.text.trim(),
               images: _selectedImages,
             ),
@@ -156,7 +156,7 @@ class _AddProjectFormState extends State<_AddProjectForm> {
                 context, 'Links', Icons.link_rounded),
             const SizedBox(height: 16),
             _buildTextField(
-              controller: _googlePlayStoreLinkController,
+              controller: _googlePlayStoreController,
               label: 'Google Play Store URL',
               hint: 'https://play.google.com/...',
               icon: Icons.shop_rounded,
@@ -164,7 +164,7 @@ class _AddProjectFormState extends State<_AddProjectForm> {
             ),
             const SizedBox(height: 16),
             _buildTextField(
-              controller: _appleAppStoreLinkController,
+              controller: _appleAppStoreController,
               label: 'Apple App Store URL',
               hint: 'https://apps.apple.com/...',
               icon: Icons.shop_rounded,

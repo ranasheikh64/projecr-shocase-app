@@ -15,7 +15,7 @@ class ProjectModel extends HiveObject {
   final String details;
 
   @HiveField(3, defaultValue: '')
-  final String googlePlayStoreLink;
+  final String googlePlayStore;
 
   @HiveField(4)
   final String github;
@@ -30,14 +30,14 @@ class ProjectModel extends HiveObject {
   final DateTime updatedAt;
 
   @HiveField(8, defaultValue: '')
-  final String appleAppStoreLink;
+  final String appleAppStore;
 
   ProjectModel({
     required this.id,
     required this.name,
     required this.details,
-    required this.googlePlayStoreLink,
-    required this.appleAppStoreLink,
+    required this.googlePlayStore,
+    required this.appleAppStore,
     required this.github,
     required this.images,
     required this.createdAt,
@@ -50,8 +50,8 @@ class ProjectModel extends HiveObject {
       id: json['_id'] as String? ?? '',
       name: json['name'] as String? ?? '',
       details: json['details'] as String? ?? '',
-      googlePlayStoreLink: json['googlePlayStoreLink'] as String? ?? '',
-      appleAppStoreLink: json['appleAppStoreLink'] as String? ?? '',
+      googlePlayStore: json['googlePlayStore'] as String? ?? '',
+      appleAppStore: json['appleAppStore'] as String? ?? '',
       github: json['github'] as String? ?? '',
       images: (json['images'] as List<dynamic>?)
               ?.map((e) => e.toString())
@@ -72,8 +72,8 @@ class ProjectModel extends HiveObject {
       '_id': id,
       'name': name,
       'details': details,
-      'googlePlayStoreLink': googlePlayStoreLink,
-      'appleAppStoreLink': appleAppStoreLink,
+      'googlePlayStore': googlePlayStore,
+      'appleAppStore': appleAppStore,
       'github': github,
       'images': images,
       'createdAt': createdAt.toIso8601String(),
@@ -87,8 +87,8 @@ class ProjectModel extends HiveObject {
       id: id,
       name: name,
       details: details,
-      googlePlayStoreLink: googlePlayStoreLink,
-      appleAppStoreLink: appleAppStoreLink,
+      googlePlayStore: googlePlayStore,
+      appleAppStore: appleAppStore,
       github: github,
       images: images,
       createdAt: createdAt,
@@ -102,8 +102,8 @@ class ProjectModel extends HiveObject {
       id: entity.id,
       name: entity.name,
       details: entity.details,
-      googlePlayStoreLink: entity.googlePlayStoreLink,
-      appleAppStoreLink: entity.appleAppStoreLink,
+      googlePlayStore: entity.googlePlayStore,
+      appleAppStore: entity.appleAppStore,
       github: entity.github,
       images: entity.images,
       createdAt: entity.createdAt,
@@ -115,8 +115,8 @@ class ProjectModel extends HiveObject {
     String? id,
     String? name,
     String? details,
-    String? googlePlayStoreLink,
-    String? appleAppStoreLink,
+    String? googlePlayStore,
+    String? appleAppStore,
     String? github,
     List<String>? images,
     DateTime? createdAt,
@@ -126,8 +126,8 @@ class ProjectModel extends HiveObject {
       id: id ?? this.id,
       name: name ?? this.name,
       details: details ?? this.details,
-      googlePlayStoreLink: googlePlayStoreLink ?? this.googlePlayStoreLink,
-      appleAppStoreLink: appleAppStoreLink ?? this.appleAppStoreLink,
+      googlePlayStore: googlePlayStore ?? this.googlePlayStore,
+      appleAppStore: appleAppStore ?? this.appleAppStore,
       github: github ?? this.github,
       images: images ?? this.images,
       createdAt: createdAt ?? this.createdAt,

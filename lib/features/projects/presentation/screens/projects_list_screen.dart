@@ -353,7 +353,7 @@ class _ProjectCard extends StatelessWidget {
   Widget _buildLinks(BuildContext context) {
     return Row(
       children: [
-        if (project.googlePlayStoreLink.isNotEmpty) ...[
+        if (project.googlePlayStore.isNotEmpty) ...[
           _LinkChip(
             icon: Icons.shop_rounded,
             label: 'Play Store',
@@ -361,7 +361,7 @@ class _ProjectCard extends StatelessWidget {
           ),
           const SizedBox(width: 8),
         ],
-        if (project.appleAppStoreLink.isNotEmpty) ...[
+        if (project.appleAppStore.isNotEmpty) ...[
           _LinkChip(
             icon: Icons.shop_rounded,
             label: 'App Store',

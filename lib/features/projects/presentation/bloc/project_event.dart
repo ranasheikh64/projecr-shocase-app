@@ -23,30 +23,30 @@ class LoadSingleProjectEvent extends ProjectEvent {
 class CreateProjectEvent extends ProjectEvent {
   final String name;
   final String details;
-  final String googlePlayStoreLink;
-  final String appleAppStoreLink;
+  final String googlePlayStore;
+  final String appleAppStore;
   final String github;
   final List<File> images;
 
   const CreateProjectEvent({
     required this.name,
     required this.details,
-    required this.googlePlayStoreLink,
-    required this.appleAppStoreLink,
+    required this.googlePlayStore,
+    required this.appleAppStore,
     required this.github,
     required this.images,
   });
 
   @override
-  List<Object?> get props => [name, details, googlePlayStoreLink, appleAppStoreLink, github, images];
+  List<Object?> get props => [name, details, googlePlayStore, appleAppStore, github, images];
 }
 
 class UpdateProjectEvent extends ProjectEvent {
   final String id;
   final String? name;
   final String? details;
-  final String? googlePlayStoreLink;
-  final String? appleAppStoreLink;
+  final String? googlePlayStore;
+  final String? appleAppStore;
   final String? github;
   final List<File>? newImages;
 
@@ -54,14 +54,14 @@ class UpdateProjectEvent extends ProjectEvent {
     required this.id,
     this.name,
     this.details,
-    this.googlePlayStoreLink,
-    this.appleAppStoreLink,
+    this.googlePlayStore,
+    this.appleAppStore,
     this.github,
     this.newImages,
   });
 
   @override
-  List<Object?> get props => [id, name, details, googlePlayStoreLink, appleAppStoreLink, github, newImages];
+  List<Object?> get props => [id, name, details, googlePlayStore, appleAppStore, github, newImages];
 }
 
 class DeleteProjectEvent extends ProjectEvent {

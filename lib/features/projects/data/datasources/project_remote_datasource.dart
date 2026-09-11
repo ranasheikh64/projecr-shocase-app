@@ -10,8 +10,8 @@ abstract class ProjectRemoteDataSource {
   Future<ProjectModel> createProject({
     required String name,
     required String details,
-    required String googlePlayStoreLink,
-    required String appleAppStoreLink,
+    required String googlePlayStore,
+    required String appleAppStore,
     required String github,
     required List<File> images,
   });
@@ -19,8 +19,8 @@ abstract class ProjectRemoteDataSource {
     required String id,
     String? name,
     String? details,
-    String? googlePlayStoreLink,
-    String? appleAppStoreLink,
+    String? googlePlayStore,
+    String? appleAppStore,
     String? github,
     List<File>? newImages,
   });
@@ -52,16 +52,16 @@ class ProjectRemoteDataSourceImpl implements ProjectRemoteDataSource {
   Future<ProjectModel> createProject({
     required String name,
     required String details,
-    required String googlePlayStoreLink,
-    required String appleAppStoreLink,
+    required String googlePlayStore,
+    required String appleAppStore,
     required String github,
     required List<File> images,
   }) async {
     final formData = FormData.fromMap({
       'name': name,
       'details': details,
-      'googlePlayStoreLink': googlePlayStoreLink,
-      'appleAppStoreLink': appleAppStoreLink,
+      'googlePlayStore': googlePlayStore,
+      'appleAppStore': appleAppStore,
       'github': github,
       'images': await Future.wait(
         images.map(
@@ -85,16 +85,16 @@ class ProjectRemoteDataSourceImpl implements ProjectRemoteDataSource {
     required String id,
     String? name,
     String? details,
-    String? googlePlayStoreLink,
-    String? appleAppStoreLink,
+    String? googlePlayStore,
+    String? appleAppStore,
     String? github,
     List<File>? newImages,
   }) async {
     final Map<String, dynamic> fields = {};
     if (name != null) fields['name'] = name;
     if (details != null) fields['details'] = details;
-    if (googlePlayStoreLink != null) fields['googlePlayStoreLink'] = googlePlayStoreLink;
-    if (appleAppStoreLink != null) fields['appleAppStoreLink'] = appleAppStoreLink;
+    if (googlePlayStore != null) fields['googlePlayStore'] = googlePlayStore;
+    if (appleAppStore != null) fields['appleAppStore'] = appleAppStore;
     if (github != null) fields['github'] = github;
 
     if (newImages != null && newImages.isNotEmpty) {

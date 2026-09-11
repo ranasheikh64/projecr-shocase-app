@@ -53,8 +53,8 @@ class _EditProjectFormState extends State<_EditProjectForm> {
   final _formKey = GlobalKey<FormState>();
   late final TextEditingController _nameController;
   late final TextEditingController _detailsController;
-  late final TextEditingController _googlePlayStoreLinkController;
-  late final TextEditingController _appleAppStoreLinkController;
+  late final TextEditingController _googlePlayStoreController;
+  late final TextEditingController _appleAppStoreController;
   late final TextEditingController _githubController;
   final List<File> _newImages = [];
   final ImagePicker _picker = ImagePicker();
@@ -64,8 +64,8 @@ class _EditProjectFormState extends State<_EditProjectForm> {
     super.initState();
     _nameController = TextEditingController(text: widget.project.name);
     _detailsController = TextEditingController(text: widget.project.details);
-    _googlePlayStoreLinkController = TextEditingController(text: widget.project.googlePlayStoreLink);
-    _appleAppStoreLinkController = TextEditingController(text: widget.project.appleAppStoreLink);
+    _googlePlayStoreController = TextEditingController(text: widget.project.googlePlayStore);
+    _appleAppStoreController = TextEditingController(text: widget.project.appleAppStore);
     _githubController = TextEditingController(text: widget.project.github);
   }
 
@@ -73,8 +73,8 @@ class _EditProjectFormState extends State<_EditProjectForm> {
   void dispose() {
     _nameController.dispose();
     _detailsController.dispose();
-    _googlePlayStoreLinkController.dispose();
-    _appleAppStoreLinkController.dispose();
+    _googlePlayStoreController.dispose();
+    _appleAppStoreController.dispose();
     _githubController.dispose();
     super.dispose();
   }
@@ -99,8 +99,8 @@ class _EditProjectFormState extends State<_EditProjectForm> {
               id: widget.project.id,
               name: _nameController.text.trim(),
               details: _detailsController.text.trim(),
-              googlePlayStoreLink: _googlePlayStoreLinkController.text.trim(),
-              appleAppStoreLink: _appleAppStoreLinkController.text.trim(),
+              googlePlayStore: _googlePlayStoreController.text.trim(),
+              appleAppStore: _appleAppStoreController.text.trim(),
               github: _githubController.text.trim(),
               newImages: _newImages.isNotEmpty ? _newImages : null,
             ),
@@ -195,7 +195,7 @@ class _EditProjectFormState extends State<_EditProjectForm> {
             _buildSectionTitle(context, 'Links', Icons.link_rounded),
             const SizedBox(height: 16),
             _buildTextField(
-              controller: _googlePlayStoreLinkController,
+              controller: _googlePlayStoreController,
               label: 'Google Play Store URL',
               hint: 'https://play.google.com/...',
               icon: Icons.shop_rounded,
@@ -203,7 +203,7 @@ class _EditProjectFormState extends State<_EditProjectForm> {
             ),
             const SizedBox(height: 16),
             _buildTextField(
-              controller: _appleAppStoreLinkController,
+              controller: _appleAppStoreController,
               label: 'Apple App Store URL',
               hint: 'https://apps.apple.com/...',
               icon: Icons.shop_rounded,
